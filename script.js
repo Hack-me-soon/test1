@@ -34,7 +34,7 @@ function initengahan(){
   function bqhilang(){wallpaper.style="transform: scale(2);";bodyblur.style="opacity:.3";bq.style = "position:relative;transition:all .7s ease;";}
   function kethalo(){new TypeIt("#halo", {strings: ["" + vketikhalo], startDelay: 50, speed: 40, waitUntilVisible: true, afterComplete: function(){halo.innerHTML = vketikhalo;setTimeout(bqmuncul,200);},}).go();}
 
-  function tombol(){wallpaper.style="transform: scale(1);";Tombol.style="opacity:1;transform: scale(1);";if(fungsi==2){By.innerHTML="&#128140; Balas"}}
+  function tombol(){wallpaper.style="transform: scale(1);";Tombol.style="opacity:1;transform: scale(1);";if(fungsi==2){By.innerHTML="&#128140; Continue"}}
   document.getElementById("By").onclick = function() {if(fungsi==1){Tombol.style="";fthilang();fungsi=0;pertanyaan();} if(fungsi==2){Tombol.style="";menuju();}}
   
   const waktuSekarang = new Date().getHours();let ucapan;
@@ -153,12 +153,26 @@ function initengahan(){
   document.getElementById("lv4").onclick = function() {lv4.style="opacity:0";slov+=1;this.onclick=null;checkslov();}
   var slov=0;function checkslov() {if(slov==4){kolombaru.style="position:relative;transform:scale(1)";otomatis();setTimeout(aktipesan2,400);}}
   
-  async function pertanyaan(){var { isConfirmed: prtanya } = await swals.fire({title: nama + ' ' + tanya, text: '' + opstanya, imageUrl: '' + fotostiker6.src, showCancelButton: true, confirmButtonText: '' + tompositif, cancelButtonText: '' + tomnegatif,});
-    if(prtanya){
-  await swalst.fire({title: '' + katatambahan.innerHTML, timer: 2000, imageUrl: '' + stikerditolak.src,});
-      vketik8=vketik81;aktipesan8();
-    } else {
-	await swalst.fire({title: '' + kataditolak.innerHTML, timer: 2000, imageUrl: '' + stikerditolak.src,});
-      vketik8="";aktipesan8();
-    }
-    }
+  async function pertanyaan() {
+  var { isConfirmed: prtanya } = await swals.fire({
+    title: nama + ' ' + tanya,
+    text: '' + opstanya,
+    imageUrl: '' + fotostiker6.src,
+    showCancelButton: true,
+    confirmButtonText: '' + tompositif,
+    cancelButtonText: '' + tomnegatif,
+  });
+
+  if (prtanya) {
+    // Redirect to the desired URL if positive button is clicked
+    window.location = "https://example.com"; // Replace with your desired URL
+  } else {
+    await swalst.fire({
+      title: '' + kataditolak.innerHTML,
+      timer: 2000,
+      imageUrl: '' + stikerditolak.src,
+    });
+    vketik8 = "";
+    aktipesan8();
+  }
+}
