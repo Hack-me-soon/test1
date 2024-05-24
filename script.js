@@ -1,3 +1,5 @@
+var nama = "Maha"; // Set the default name to "Maha"
+
 function initengahan(){
     kadoIn.style="display:none";ket.style="display:none";
     Content.style = "opacity:1;margin-top:0";
@@ -5,12 +7,15 @@ function initengahan(){
     wallpaper.style="transform: scale(1.5);";
   }
   
-  async function mulainama() {
-    bodyblur.style="opacity:.7";
-    wallpaper.style="transform: scale(1);";
-    fotostiker.style="display:inline-flex;";setTimeout(ftmuncul,200);
-    setTimeout(kethalo,500);
+  async function mulainama(){
+    nama = "Maha"; // Set the name to "Maha" automatically
+    bodyblur.style = "opacity:.7";
+    wallpaper.style = "transform: scale(1);";
+    fotostiker.style = "display:inline-flex;";
+    setTimeout(ftmuncul, 200);
+    setTimeout(kethalo, 500);
   }
+
   
   function ftmuncul(){
     if(ftganti==0){fotostiker.src = deffotostiker;}
