@@ -165,7 +165,7 @@ function initengahan(){
 
   if (prtanya) {
     // Redirect to the desired URL if positive button is clicked
-    window.location = "https://example.com"; // Replace with your desired URL
+    window.location = "https://mahalakshmi-bestie-birthday.netlify.app/"; // Replace with your desired URL
   } else {
     await swalst.fire({
       title: '' + kataditolak.innerHTML,
