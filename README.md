@@ -1,4 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/867d63b4-d719-4788-a28d-1a9c4751d617/deploy-status)](https://app.netlify.com/sites/abhishekbgowda/deploys)
 # dewi
 Webnyo lihat sini yah : https://himangmyid.github.io/dewi/
 
